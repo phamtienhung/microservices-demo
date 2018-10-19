@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OrderManagement", "OrderManagement", "{7F513C95-0126-456D-8020-257ED21DEE7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserManagement", "UserManagement", "{DF124CB8-68F4-494D-9440-CB4D71CA6209}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{C2A9BC4D-E3AD-482A-86F1-AE68E933C3C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MD.API", "MD.API", "{D883682A-D97C-4D85-95E9-3A5BA387B28D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderManagement.Core", "OrderManagement.Core\OrderManagement.Core.csproj", "{0EBD5508-1FD6-4F17-8895-4D23BAC80CBA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderManagement.Data", "OrderManagement.Data\OrderManagement.Data.csproj", "{0E4F37AD-2BF3-41CA-A7B2-162F7ADBF8C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MD.SharedKernel", "MD.SharedKernel", "{CEC38DAA-F112-4FE1-B7FA-7BE017A6A483}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MD.SharedKernel", "MD.SharedKernel\MD.SharedKernel.csproj", "{AD10B6EF-6CB4-49BD-B428-F206FBB7415A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EBD5508-1FD6-4F17-8895-4D23BAC80CBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EBD5508-1FD6-4F17-8895-4D23BAC80CBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EBD5508-1FD6-4F17-8895-4D23BAC80CBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EBD5508-1FD6-4F17-8895-4D23BAC80CBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E4F37AD-2BF3-41CA-A7B2-162F7ADBF8C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E4F37AD-2BF3-41CA-A7B2-162F7ADBF8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E4F37AD-2BF3-41CA-A7B2-162F7ADBF8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E4F37AD-2BF3-41CA-A7B2-162F7ADBF8C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD10B6EF-6CB4-49BD-B428-F206FBB7415A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD10B6EF-6CB4-49BD-B428-F206FBB7415A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD10B6EF-6CB4-49BD-B428-F206FBB7415A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD10B6EF-6CB4-49BD-B428-F206FBB7415A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0EBD5508-1FD6-4F17-8895-4D23BAC80CBA} = {7F513C95-0126-456D-8020-257ED21DEE7C}
+		{0E4F37AD-2BF3-41CA-A7B2-162F7ADBF8C6} = {7F513C95-0126-456D-8020-257ED21DEE7C}
+		{AD10B6EF-6CB4-49BD-B428-F206FBB7415A} = {CEC38DAA-F112-4FE1-B7FA-7BE017A6A483}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C0A119B-AACF-4319-A3E5-0D44EE45F032}
+	EndGlobalSection
+EndGlobal
