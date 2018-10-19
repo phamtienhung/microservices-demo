@@ -7,6 +7,8 @@ Project chia sẻ cách viết và triển khai 1 dự án sử dụng micro-ser
 
 ## Use case (demo)
 Business case sử dụng để làm ví dụ:
+![Architecture](/UseCase.png?raw=true "Use cases")
+
 ```mermaid
 sequenceDiagram
 User ->> Web: Xem danh sách products
