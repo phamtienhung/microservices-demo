@@ -7,7 +7,7 @@ Project chia sẻ cách viết và triển khai 1 dự án sử dụng micro-ser
 
 ## Use case (demo)
 Business case sử dụng để làm ví dụ:
-![Architecture](/UseCase.png?raw=true "Use cases")
+![UseCase](/UseCase.png?raw=true "Use cases")
 
 ```mermaid
 sequenceDiagram
@@ -28,7 +28,8 @@ Order Service-->> Web: Order Paid Successfully Event
 ```
 
 ## Bounded context
-Tư duy Bounded context được áp dụng để phân tách các micro-services.
+Bounded context được áp dụng để phân tách các micro-services.
+![BoundedContext](/BoundedContext.png?raw=true "Bounded context")
 
 ## Công nghệ 
 Các công nghệ sử dụng trong project:
