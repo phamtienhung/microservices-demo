@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MD.SharedKernel.ValueObjects;
+using Microsoft.EntityFrameworkCore;
 using OrderManagement.Core.Model.OrderAggregate;
 using System;
 using System.Collections.Generic;
@@ -25,17 +26,25 @@ namespace OrderManagement.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Order>().HasKey(c => c.Id);
-            modelBuilder.Entity<Order>().HasMany<OrderItem>(c => c.OrderItems).WithOne(t => t.Order).HasForeignKey(t => t.OrderId);
-            modelBuilder.Entity<OrderItem>().HasKey(c => c.Id);
-            modelBuilder.Entity<OrderItem>().Ignore(a => a.State);
-            modelBuilder.Entity<OrderItem>().Ignore(t => t.Price);
-
-            //modelBuilder.Entity<OrderItem>().Property(t => t.Price.Currency).HasColumnName("PriceUnit");
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Order>(o =>
+            {
+                o.HasKey(t => t.Id);
+                o.HasMany<OrderItem>(c => c.OrderItems).WithOne(t => t.Order).HasForeignKey(t => t.OrderId);
+            });
+
+            modelBuilder.Entity<OrderItem>(o =>
+            {
+                o.Ignore(t => t.State);
+                o.HasKey(t => t.Id);
+                o.OwnsOne<Money>(t => t.Price, price =>
+                {
+                    price.Property(x => x.Amount).HasColumnName("PriceValue");
+                    price.Property(x => x.Currency).HasColumnName("PriceUnit");
+                });
+            });
         }
-
-
 
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
