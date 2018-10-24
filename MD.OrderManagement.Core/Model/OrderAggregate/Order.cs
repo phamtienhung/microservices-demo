@@ -13,9 +13,15 @@ namespace OrderManagement.Core.Model.OrderAggregate
         public string OrderDetails { get; set; }
         private List<OrderItem> orderItems;
 
-        public IReadOnlyList<OrderItem> OrderItems
+        public IEnumerable<OrderItem> OrderItems
         {
-            get { return orderItems.AsReadOnly(); }
+            get { return orderItems.AsEnumerable(); }
+            set { orderItems = value.ToList();  }
+        }
+
+        public Order()
+        {
+
         }
 
         public Order(int customerId, DateTime datePlaced, string details)
@@ -41,7 +47,7 @@ namespace OrderManagement.Core.Model.OrderAggregate
             }
             else
             {
-                item.Order = this;
+                item.OrderId = this.Id;
                 orderItems.Add(item);
             }
         }
